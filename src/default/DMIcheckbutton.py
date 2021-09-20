@@ -1,4 +1,4 @@
-import box
+from src.default import box
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -29,14 +29,14 @@ class DMIcheckbutton:
             la boite doit-elle être remplie en bleu clair
         """
         # Initialise la boite pour la boite du checkbutton
-        self.box_box = box.BoxDrawer(x, y, x + box_lenght, y + box_lenght, text, fill)
+        self.box_box = box.BoxDrawer(x, y, box_lenght, box_lenght, "", fill)
 
         # Initialise la boite pour le texte du checkbutton
         drawing = ImageDraw.Draw(Image.new("RGB", (640, 480), (3, 17, 34)))
         text_w, text_h = drawing.textsize(checkbutton_text, font=ImageFont.truetype("arial.ttf", text_size))
         text_x = x + box_lenght + text_size
         text_y = y + (box_lenght - text_h)/2
-        self.text_box = box.BoxDrawer(text_x, text_y, text_w, text_h, text, fill)
+        self.text_box = box.BoxDrawer(text_x, text_y - 1, text_w, text_h + 4, text, fill)
 
     def draw(self, drawing):
         """Permet de dessiner la boite
