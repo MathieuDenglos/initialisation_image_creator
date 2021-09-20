@@ -1,9 +1,10 @@
-import general_layout as gn
+from src.default import box, image
 
 
 def main():
-    gn.general_layout()
-    gn.detailed_layout()
+    complete_layout = image.ImageDrawer("e")
+    complete_layout.draw([box.BoxDrawer(20, 20, 120, 40, "Oui", False)])
+    complete_layout.save()
 
 
 if __name__ == "__main__":
