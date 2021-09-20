@@ -26,7 +26,7 @@ class BoxDrawer:
         fill : `bool`
             la boite doit-elle être remplie en bleu clair
         """
-        self.xy = [x, y, x + width, y + height]
+        self.xy = [x, y, x + width - 1, y + height - 1]
         self.text = text
         self.fill = not not fill
 
@@ -40,7 +40,7 @@ class BoxDrawer:
         drawing.rectangle([self.xy[0], self.xy[1], self.xy[2], self.xy[3]],
                           width=1,
                           outline=(255, 255, 255),
-                          fill=(97, 193, 193) if self.fill else None)
+                          fill=(97, 193, 193) if self.fill else (3, 17, 34))
 
         # Dessine le texte
         w, h = drawing.textsize(self.text)
