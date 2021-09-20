@@ -1,4 +1,3 @@
-# pip install Pillow
 from src.default import box, image
 
 
