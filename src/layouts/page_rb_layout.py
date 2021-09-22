@@ -50,3 +50,16 @@ def page_rb5():
                                 DMIcheckbutton(15, 379, 20, "Eteindre les écrans qui ne sont pas utilisés ?)", 12, "rb5_G (400x20)")])
     page_rb5_layout_image.save()
 
+def screen_parameters_item():
+    screen_parameters_layout = image.ImageDrawer("screen_parameters.png", 472, 76)
+    screen_parameters_layout.draw([DMIbutton(0, 0, 472, 76, ""),
+                                   DMItext(14, 14, "AHHHHHHHHHHHHHHHHHHHHHHHHHHHH", 12, "SPI_A (300x14)"),
+                                   DMIcheckbutton(346, 10, 20, "Plein écran ?    ", 12, "SPI_B (60x20)"),
+                                   DMIcombobox(1, 45, 100, 30, "SPI_C\n(100x30)"),
+                                   DMIvalueinput(134, 45, 60, 30, "SPI_D\n(60x30)"),
+                                   DMIvalueinput(218, 45, 60, 30, "SPI_E\n(60x30)"),
+                                   DMIvalueinput(325, 45, 60, 30, "SPI_F\n(60x30)"),
+                                   DMIvalueinput(411, 45, 60, 30, "SPI_G\n(60x30)")])
+    screen_parameters_layout.save()
+
+

@@ -7,7 +7,8 @@ def main():
     # gl.detailed_layout()
 
     # rbl.page_rb1()
-    rbl.page_rb5()
+    # rbl.page_rb5()
+    rbl.screen_parameters_item()
 
 if __name__ == "__main__":
     main()
